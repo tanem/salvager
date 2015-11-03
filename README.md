@@ -1,8 +1,7 @@
 # salvager
 
-[![NPM version](https://badge.fury.io/js/salvager.svg)](http://badge.fury.io/js/salvager)
-[![Dependency Status](https://david-dm.org/tanem/salvager.png)](https://david-dm.org/tanem/salvager)
-[![devDependency Status](https://david-dm.org/tanem/salvager/dev-status.svg)](https://david-dm.org/tanem/salvager#info=devDependencies)
+[![npm version](https://img.shields.io/npm/v/salvager.svg?style=flat-square)](https://www.npmjs.com/package/salvager)
+[![npm downloads](https://img.shields.io/npm/dm/salvager.svg?style=flat-square)](https://www.npmjs.com/package/salvager)
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/salvager.svg)](https://saucelabs.com/u/salvager)
 
