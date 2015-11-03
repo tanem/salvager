@@ -4,14 +4,12 @@ export default function salvager({
   target,
   data,
   bufferSize = 100,
-  buildRow = (data) => {
+  buildRow = data => {
     const row = document.createElement('div');
     row.textContent = data;
     return row;
   },
-  updateRow = (row, data) => {
-    row.textContent = data;
-  }
+  updateRow = (row, data) => row.textContent = data
 }) {
 
   const state = [];
