@@ -80,7 +80,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  } : _ref$buildRow;
 	  var _ref$updateRow = _ref.updateRow;
 	  var updateRow = _ref$updateRow === undefined ? function (row, data) {
-	    row.textContent = data;
+	    return row.textContent = data;
 	  } : _ref$updateRow;
 	  return (function () {
 
