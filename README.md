@@ -1,5 +1,6 @@
 # salvager
 
+[![build status](https://img.shields.io/travis/tanem/salvager/master.svg?style=flat-square)](https://travis-ci.org/tanem/salvager)
 [![npm version](https://img.shields.io/npm/v/salvager.svg?style=flat-square)](https://www.npmjs.com/package/salvager)
 [![npm downloads](https://img.shields.io/npm/dm/salvager.svg?style=flat-square)](https://www.npmjs.com/package/salvager)
 
