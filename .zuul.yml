@@ -1,0 +1,14 @@
+ui: tape
+browserify:
+  - transform: babelify
+browsers:
+  - name: chrome
+    version: latest
+  - name: firefox
+    version: latest
+  - name: safari
+    version: latest
+  - name: opera
+    version: latest
+  - name: ie
+    version: latest

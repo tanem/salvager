@@ -1,0 +1,49 @@
+{
+  "name": "salvager",
+  "version": "1.0.0",
+  "description": "Reuse row elements when displaying large datasets.",
+  "main": "lib/salvager.js",
+  "scripts": {
+    "clean": "rimraf lib dist coverage",
+    "lint": "eslint src test",
+    "test:local": "zuul --no-coverage --local --open -- test/salvager.test.js",
+    "test": "npm run lint && zuul -- test/salvager.test.js",
+    "build:lib": "babel src -d lib",
+    "build:umd": "webpack src/salvager.js dist/salvager.js --config webpack.config.development.js",
+    "build:umd:min": "webpack src/salvager.js dist/salvager.min.js --config webpack.config.production.js",
+    "build": "npm run build:lib && npm run build:umd && npm run build:umd:min",
+    "prepublish": "in-publish && npm run clean && npm run build || not-in-publish",
+    "example": "npm run build:umd:min && opener example/index.html"
+  },
+  "author": {
+    "name": "Tane Morgan",
+    "url": "http://github.com/tanem"
+  },
+  "keywords": [
+    "recycle",
+    "list",
+    "scroll",
+    "table",
+    "data"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.8.29",
+    "babel-core": "^5.8.33",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^5.3.3",
+    "babelify": "^6.4.0",
+    "eslint": "^1.7.3",
+    "in-publish": "^2.0.0",
+    "opener": "^1.4.1",
+    "rimraf": "^2.4.3",
+    "sinon": "^1.17.2",
+    "synthetic-dom-events": "^0.3.0",
+    "tape": "^4.2.2",
+    "webpack": "^1.12.2",
+    "zuul": "^3.7.2"
+  },
+  "dependencies": {
+    "clamp": "^1.0.1"
+  }
+}

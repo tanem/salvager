@@ -1,0 +1,10 @@
+src
+example
+test
+.editorconfig
+.eslintrc
+.gitignore
+.npmignore
+.zuul.yml
+.travis.yml
+webpack.*
