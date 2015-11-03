@@ -66,7 +66,7 @@ test('should move nothing if both buffers haven\'t significantly changed', asser
   scroll(1);
   const rowEls = document.querySelectorAll('.Salvager-row');
   assert.deepEqual(
-    slice(rowEls).map(el => el.style.transform),
+    slice(rowEls).map(el => el.style.transform || ''),
     ['', '', '']
   );
   assert.end();
@@ -86,7 +86,7 @@ test('should move the correct data from buffer to newBuffer if newBuffer is slig
   scroll(40);
   const rowEls = document.querySelectorAll('.Salvager-row');
   assert.deepEqual(
-    slice(rowEls).map(el => el.style.transform),
+    slice(rowEls).map(el => el.style.transform || ''),
     ['translateY(60px)', '', '']
   );
   assert.end();
@@ -107,7 +107,7 @@ test('should move the correct data from buffer to newBuffer if newBuffer is slig
   scroll(-40);
   const rowEls = document.querySelectorAll('.Salvager-row');
   assert.deepEqual(
-    slice(rowEls).map(el => el.style.transform),
+    slice(rowEls).map(el => el.style.transform || ''),
     ['translateY(0px)', '', '']
   );
   assert.end();
@@ -127,7 +127,7 @@ test('should move the correct data from buffer to newBuffer if newBuffer is comp
   scroll(80);
   const rowEls = document.querySelectorAll('.Salvager-row');
   assert.deepEqual(
-    slice(rowEls).map(el => el.style.transform),
+    slice(rowEls).map(el => el.style.transform || ''),
     ['translateY(60px)', 'translateY(60px)', 'translateY(60px)']
   );
   assert.end();
@@ -148,7 +148,7 @@ test('should move the correct data from buffer to newBuffer if newBuffer is comp
   scroll(-80);
   const rowEls = document.querySelectorAll('.Salvager-row');
   assert.deepEqual(
-    slice(rowEls).map(el => el.style.transform),
+    slice(rowEls).map(el => el.style.transform || ''),
     ['translateY(0px)', 'translateY(0px)', 'translateY(0px)']
   );
   assert.end();
