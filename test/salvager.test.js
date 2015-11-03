@@ -28,12 +28,12 @@ const createSalvager = () => {
   });
 };
 
-const scroll = (amount) => {
+const scroll = amount => {
   target.scrollTop += amount;
   target.dispatchEvent(event('scroll'));
 };
 
-const cleanup = (salvager) => {
+const cleanup = salvager => {
   salvager.destroy();
   target.scrollTop = 0;
 };
@@ -46,7 +46,7 @@ const cleanup = (salvager) => {
 4 spacer
 5 spacer
 */
-test('should calculate the correct spacer height', (assert) => {
+test('should calculate the correct spacer height', assert => {
   const s = createSalvager();
   assert.equal(document.querySelector('.Salvager-spacer').offsetHeight, 60);
   assert.end();
@@ -61,12 +61,12 @@ test('should calculate the correct spacer height', (assert) => {
 4
 5
 */
-test('should move nothing if both buffers haven\'t significantly changed', (assert) => {
+test('should move nothing if both buffers haven\'t significantly changed', assert => {
   const s = createSalvager();
   scroll(1);
   const rowEls = document.querySelectorAll('.Salvager-row');
   assert.deepEqual(
-    slice(rowEls).map((el) => el.style.transform),
+    slice(rowEls).map(el => el.style.transform),
     ['', '', '']
   );
   assert.end();
@@ -81,12 +81,12 @@ test('should move nothing if both buffers haven\'t significantly changed', (asse
 4
 5
 */
-test('should move the correct data from buffer to newBuffer if newBuffer is slightly ahead', (assert) => {
+test('should move the correct data from buffer to newBuffer if newBuffer is slightly ahead', assert => {
   const s = createSalvager();
   scroll(40);
   const rowEls = document.querySelectorAll('.Salvager-row');
   assert.deepEqual(
-    slice(rowEls).map((el) => el.style.transform),
+    slice(rowEls).map(el => el.style.transform),
     ['translateY(60px)', '', '']
   );
   assert.end();
@@ -101,13 +101,13 @@ test('should move the correct data from buffer to newBuffer if newBuffer is slig
 4
 5
 */
-test('should move the correct data from buffer to newBuffer if newBuffer is slightly behind', (assert) => {
+test('should move the correct data from buffer to newBuffer if newBuffer is slightly behind', assert => {
   const s = createSalvager();
   scroll(40);
   scroll(-40);
   const rowEls = document.querySelectorAll('.Salvager-row');
   assert.deepEqual(
-    slice(rowEls).map((el) => el.style.transform),
+    slice(rowEls).map(el => el.style.transform),
     ['translateY(0px)', '', '']
   );
   assert.end();
@@ -122,12 +122,12 @@ test('should move the correct data from buffer to newBuffer if newBuffer is slig
 4        newBuffer
 5        newBuffer
 */
-test('should move the correct data from buffer to newBuffer if newBuffer is completely ahead', (assert) => {
+test('should move the correct data from buffer to newBuffer if newBuffer is completely ahead', assert => {
   const s = createSalvager();
   scroll(80);
   const rowEls = document.querySelectorAll('.Salvager-row');
   assert.deepEqual(
-    slice(rowEls).map((el) => el.style.transform),
+    slice(rowEls).map(el => el.style.transform),
     ['translateY(60px)', 'translateY(60px)', 'translateY(60px)']
   );
   assert.end();
@@ -142,20 +142,20 @@ test('should move the correct data from buffer to newBuffer if newBuffer is comp
 4 buffer
 5 buffer
 */
-test('should move the correct data from buffer to newBuffer if newBuffer is completely behind', (assert) => {
+test('should move the correct data from buffer to newBuffer if newBuffer is completely behind', assert => {
   const s = createSalvager();
   scroll(80);
   scroll(-80);
   const rowEls = document.querySelectorAll('.Salvager-row');
   assert.deepEqual(
-    slice(rowEls).map((el) => el.style.transform),
+    slice(rowEls).map(el => el.style.transform),
     ['translateY(0px)', 'translateY(0px)', 'translateY(0px)']
   );
   assert.end();
   cleanup(s);
 });
 
-test('should build rows correctly', (assert) => {
+test('should build rows correctly', assert => {
   const s = createSalvager();
   for (let i = 1, j = 3; i <= j; i++) {
     let row = document.querySelector(`.Salvager-row:nth-child(${i})`);
@@ -166,7 +166,7 @@ test('should build rows correctly', (assert) => {
   cleanup(s);
 });
 
-test('should update rows correctly', (assert) => {
+test('should update rows correctly', assert => {
   const s = createSalvager();
   scroll(80);
   for (let i = 1, j = 3; i <= j; i++) {

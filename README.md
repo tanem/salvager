@@ -31,14 +31,14 @@ salvager({
   target: document.querySelector('.Container'),
   data: data,
   bufferSize: 50,
-  buildRow: function(data){
+  buildRow(data) {
     var row = document.createElement('div');
     row.style.padding = '10px';
     row.textContent = data;
     row.style.backgroundColor = getStripeColour(data);
     return row;
   },
-  updateRow: function(row, data){
+  updateRow(row, data) {
     row.textContent = data;
     row.style.backgroundColor = getStripeColour(data);
   }
@@ -70,7 +70,7 @@ __Arguments__
 * `buildRow` - *Optional* The function used to generate each row element. Defaults to:
 
 ```js
-(data) => {
+data => {
   const row = document.createElement('div');
   row.textContent = data;
   return row;
@@ -80,9 +80,7 @@ __Arguments__
 * `updateRow` - *Optional* The function used when updating a row element. Defaults to:
 
 ```js
-(row, data) => {
-  row.textContent = data;
-}
+(row, data) => row.textContent = data
 ```
 
 ## Tests
