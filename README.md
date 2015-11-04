@@ -93,8 +93,8 @@ $ npm run test-local
 
 ## Credits
 
-- The core algorithm is based on [Smart Table Scroll](https://github.com/cmpolis/smart-table-scroll). I thought it was a great idea, so decided to dig into it some more and tweak it here :smile:
-- [Redux](https://github.com/rackt/redux) for ideas around webpack setup, npm run scripts, and dot files :+1:
+- The core algorithm is based on [@cmpolis](https://github.com/cmpolis)'s [Smart Table Scroll](https://github.com/cmpolis/smart-table-scroll). I thought it was a great idea, so decided to dig into it some more and tweak it here :smile:
+- [@gaearon](https://github.com/gaearon)'s [Redux](https://github.com/rackt/redux) for ideas around webpack setup, npm run scripts, and dot files :+1:
 
 ## License
 
