@@ -19,6 +19,8 @@ Reuse row elements when displaying large datasets. This is beneficial to perform
 $ npm install salvager --save
 ```
 
+You can also use the files in `dist`, where `salvager` is exposed via UMD.
+
 ## Example
 
 ```js
