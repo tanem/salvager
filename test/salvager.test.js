@@ -61,12 +61,12 @@ test('should calculate the correct spacer height', assert => {
 4
 5
 */
-test('should move nothing if both buffers haven\'t significantly changed', assert => {
+test.only('should move nothing if both buffers haven\'t significantly changed', assert => {
   const s = createSalvager();
   scroll(1);
   const rowEls = document.querySelectorAll('.Salvager-row');
   assert.deepEqual(
-    slice(rowEls).map(el => el.style.transform || ''),
+    [...rowEls].map(el => el.style.transform || ''),
     ['', '', '']
   );
   assert.end();
