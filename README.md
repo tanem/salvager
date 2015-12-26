@@ -91,6 +91,10 @@ data => {
 $ npm run test-local
 ```
 
+## React
+
+Salvager has been ported to a React module, see [react-salvager](https://github.com/tanem/react-salvager).
+
 ## Credits
 
 - The core algorithm is based on [@cmpolis](https://github.com/cmpolis)'s [Smart Table Scroll](https://github.com/cmpolis/smart-table-scroll). I thought it was a great idea, so decided to dig into it some more and tweak it here :smile:
