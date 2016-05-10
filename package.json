@@ -1,6 +1,6 @@
 {
   "name": "salvager",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Reuse row elements when displaying large datasets.",
   "main": "lib/salvager.js",
   "scripts": {
